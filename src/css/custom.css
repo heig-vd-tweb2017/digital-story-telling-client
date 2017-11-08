@@ -2,9 +2,9 @@
 .backgroundGreen a:link,
 .backgroundGreena:visited, 
 .backgroundGreen a:hover{
-  color: #CAFF4D;
+  color: rgb(21, 114, 12);
 }
 
-.backgroundGreen b{
-    color: #FEF7CF;
+.backgroundGreen {
+  background-color: rgba(0, 0, 0, 0.082);
 }
