@@ -1,14 +1,53 @@
-.backgroundGreen a,
-.backgroundGreen a:link,
-.backgroundGreena:visited, 
-.backgroundGreen a:hover{
+.grayed a,a:link,a:visited,a:hover{
   color: rgb(21, 114, 12);
 }
 
-.backgroundGreen {
-  background-color: rgba(0, 0, 0, 0.082);
+.grayed {
+  background-color: rgb(209, 209, 209);
 }
 
 .row {
   display: inline;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+ }
+
+hr.star-secondary {
+  border-color: #2c3e50 !important;
+}
+
+hr.star-secondary {
+  max-width: 250px;
+  margin: 25px auto 30px;
+  padding: 0;
+  text-align: center;
+  border: none;
+      border-top-width: medium;
+      border-top-style: none;
+      border-top-color: currentcolor;
+      border-right-color: currentcolor;
+      border-bottom-color: currentcolor;
+      border-left-color: currentcolor;
+  border-top: solid 5px;
+      border-top-color: currentcolor;
+}
+
+hr.star-secondary::after {
+  font-family: FontAwesome;
+  font-size: 2em;
+  position: relative;
+  top: -.8em;
+  display: inline-block;
+  padding: 0 .25em;
+  content: '\f005';
+}
+
+hr.star-secondary::after {
+  color: #2c3e50;
+  background-color: rgb(209, 209, 209);
 }
