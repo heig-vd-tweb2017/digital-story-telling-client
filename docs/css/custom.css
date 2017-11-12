@@ -8,3 +8,7 @@
 .backgroundGreen {
   background-color: rgba(0, 0, 0, 0.082);
 }
+
+.row {
+  display: inline;
+}
