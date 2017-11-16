@@ -12,11 +12,19 @@
 
 h1,h2,h3,h4,h5,h6 {
   overflow-wrap: break-word;
-  margin-top: 2rem;
+}
+
+h3 {
+  margin-top: 3rem;
 }
 
 h4 {
+  margin-top: 2rem;
   font-size: 1.1rem;
+}
+
+li {
+  font-size: 20px;
 }
 
 hr.star-secondary {
@@ -59,8 +67,24 @@ hr.star-secondary::after {
 }
 
 .img-inline {
-  max-width: 500px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 500px;
+  width: 100%;
+}
+
+.question {
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  text-align: justify;
+}
+
+li {
+  text-align: justify;
 }
