@@ -3,7 +3,7 @@
 }
 
 .grayed {
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(245, 245, 245)
 }
 
 .row {
@@ -49,5 +49,16 @@ hr.star-secondary::after {
 
 hr.star-secondary::after {
   color: #2c3e50;
-  background-color: rgb(209, 209, 209);
+  background-color: rgb(245, 245, 245)
+}
+
+.logo {
+  width: 100px;
+}
+
+.img-inline {
+  max-width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
