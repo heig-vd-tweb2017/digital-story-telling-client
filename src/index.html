@@ -24,6 +24,24 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <!-- script to use D3 -->
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.1"></script>
+    <!-- tooltip interactive with D3 -->
+    <style type="text/css">
+     div.tooltip {
+      position: absolute;
+      text-align: center;
+      width: 400px;
+      height: 400px;
+      padding: 8px;
+    /*  font: 10px sans-serif;*/
+      background: #ddd;
+      border: solid 1px #aaa;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    </style>
+
   </head>
 
   <body id="page-top">
@@ -152,6 +170,8 @@
           </p>
           <p>
             ICI VIENDRAIT LE TABLEAU INTERACTIF AVEC LES VIANDES / VEGETAUX
+            <div id="tableInteractive"></div>
+
             Ainsi pour
             produire 1kg de pommes de terre il ne faut que 500 litres d'eau et 2000 litres pour 1kg de soja ou de maïs.
           </p>
@@ -631,6 +651,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/custom.js"></script>
+
+    
+    <!-- Custom D3 scripts for this template -->
+    <script src="js/customD3.js"></script>
 
   </body>
 
