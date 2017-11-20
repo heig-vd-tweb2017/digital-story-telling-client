@@ -21,6 +21,9 @@
     <!-- Styles for Freelancer's template -->
     <link href="css/freelancer.min.css" rel="stylesheet">
 
+    <!-- Style for Leaflet -->
+    <link href="css/leaflet.css" rel="stylesheet"/>
+
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
@@ -92,7 +95,6 @@
         <h2 class="text-center">Introduction</h2>
         <hr class="star-primary">
         <div class="row">
-          <img class="img-fluid" src="img/Marguerite.jpg" alt="">
           <p>
             Vous souhaitez comprendre pourquoi la viande est tant critiquée ? Pourquoi le mouvement végétarien et vegan
             est plus qu'une mode ?<br>
@@ -102,7 +104,6 @@
             Il existe de multiples interrogations au sujet de la viande. C'est la raison pour laquelle nous vous
             invitons à suivre Marguerite et Gretta pour mieux comprendre la situation !
           </p>
-          <img class="img-fluid" src="img/gretta.jpg" alt=""><br>
         </div>
       </div>
     </section>
@@ -458,8 +459,9 @@
           <p class="question">
             Combien consommons-nous de viande ?
           </p>
-          <p>
-            ICI VIENDRA LE GRAPHIQUE DE LA CONSOMMATION
+          <p class="map-form">
+            1961 <input id="year-input" name="year-input" class="year-input" type="range" value="1961" max="2013" min="1961" step="1" onchange="updateMap()"> 2013
+            <div id="map" class="map"></div>
           </p>
           <p>
             Avec la <a href="https://fr.wikipedia.org/wiki/Mondialisation">mondialisation</a> et l'accès toujours de 
@@ -669,10 +671,13 @@
     <!-- Scripts for Freelancer's template -->
     <script src="js/freelancer.min.js"></script>
 
+    <!-- Script for Leaflet -->
+    <script src="js/leaflet.js"></script>
+    <script src="js/world-map.js"></script>
+
     <!-- Custom scripts for this template -->
     <script src="js/custom.js"></script>
 
-    
     <!-- Custom D3 scripts for this template -->
     <script src="js/customD3.js"></script>
 
