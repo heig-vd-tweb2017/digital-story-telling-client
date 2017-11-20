@@ -4,14 +4,14 @@
   border-collapse: collapse;
   margin-top: 10px;
   margin-bottom: 10px;
-  margin-left:10px;
-  margin-right: 10px;
 }
 .tableau caption {
-  font-size:1.4rem;
+  font-size:12px;
   color:#FFFFFF;
-  background-color: #329792;
+  background-color: #1C615E;
   caption-side: top;
+  padding-left: 10px;
+  padding-right: 10px;
  /* caption-side: bottom; // top|bottom|initial|inherit; */
 }
 .tableau th {
@@ -19,16 +19,19 @@
   color:#090808;
   margin-left: 10px;
   padding-right: 10px;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  font-size: 22px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-variant: small-caps;
 }
 .tableau td{
-    margin-left: 10px;
+    padding-left: 10px;
     padding-right: 10px;
-    margin-top: 10px;
-    padding-bottom: 10px;
-    font-size: 20px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.tableau th:last-child{
+    text-align: right;
 }
 .zebre tbody tr:nth-child(odd) {
   background-color: #DAE5E6;
