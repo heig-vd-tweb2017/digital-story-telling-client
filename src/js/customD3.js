@@ -25,6 +25,10 @@ class ImgInteractive {
       .on('mouseout', this.mouseout.bind(this));
   }
 
+  getSvg() {
+    return this.svgImg;
+  }
+
   mousemove(id, tables) {
     this.div
       .html(`<span id=${id}> ${tables}</span>`)
@@ -44,44 +48,52 @@ class ImgInteractive {
 }
 
 class Table {
-  constructor(elementId, titleTable, titles, rows) {
+  constructor(elementId, titleTable, tableHeader, rows) {
     this.elementId = document.getElementById(elementId);
-    this.table = '';
-    this.addTable(titleTable, titles, rows);
+    this.tables = '';
+    this.listTable = [];
+    this.addTable(titleTable, tableHeader, rows);
   }
 
-  addTable(titleTable, titles, rows) {
-    this.table += '<table class="tableau zebre">';
-    this.table += `<caption>${titleTable}</caption>`;
-    this.table += '<colgroup><col /><col /> </colgroup>';
-    this.table += '<thead>';
-    this.table += '<tr>';
-
+  addTable(titleTable, tableHeader, rows) {
+    let table = '';
+    table += '<table class="tableau zebre">';
+    table += `<caption>${titleTable}</caption>`;
+    table += '<colgroup><col /><col /> </colgroup>';
+    table += '<thead>';
+    table += '<tr>';
     // Title
-    titles.forEach((title) => {
-      this.table += `<th>${title}</th>`;
+    tableHeader.forEach((title) => {
+      table += `<th>${title}</th>`;
     });
-    this.table += '</tr>';
-    this.table += '</thead>';
-    this.table += '<tbody>';
+    table += '</tr>';
+    table += '</thead>';
+    table += '<tbody>';
 
     // Body
     rows.forEach((row) => {
-      this.table += '<tr>';
+      table += '<tr>';
       row.forEach((cell) => {
-        this.table += `<td>${cell}</td>`;
+        table += `<td>${cell}</td>`;
       });
-      this.table += '</tr>';
+      table += '</tr>';
     });
 
-    this.table += '</tbody>';
-    this.table += '</table>';
+    table += '</tbody>';
+    table += '</table>';
+    this.tables += table;
+    this.listTable.push(table);
   }
 
-  getTable() {
-    return this.table;
+  getTables() {
+    return this.tables;
+  }
+
+  getTable(index) {
+    return this.tables[index];
   }
 }
+
 
 const nutrimentsTitle = ['Ressource', 'Qte / Kg'];
 const consoTitle = ['Nutriments', 'Qte / Kg'];
@@ -124,9 +136,9 @@ tableCereals.addTable('Quel apport en nutriment contient les céréales ?', nutr
 
 
 const imgTable = new ImgInteractive('#tableInteractive');
-imgTable.addImage('svg/cow.svg', idBeef, tableBeef.getTable());
-imgTable.addImage('svg/pig.svg', idPig, tablePig.getTable());
-imgTable.addImage('svg/chicken.svg', idBeef, tableChicken.getTable());
-imgTable.addImage('svg/vegetables.svg', idBeef, tableBeef.getTable());
-imgTable.addImage('svg/beans.svg', idBeef, tableBeef.getTable());
-imgTable.addImage('svg/cereals.svg', idBeef, tableBeef.getTable());
+imgTable.addImage('svg/cow.svg', idBeef, tableBeef.getTables());
+imgTable.addImage('svg/pig.svg', idPig, tablePig.getTables());
+imgTable.addImage('svg/chicken.svg', idBeef, tableChicken.getTables());
+imgTable.addImage('svg/vegetables.svg', idBeef, tableBeef.getTables());
+imgTable.addImage('svg/beans.svg', idBeef, tableBeef.getTables());
+imgTable.addImage('svg/cereals.svg', idBeef, tableBeef.getTables());
