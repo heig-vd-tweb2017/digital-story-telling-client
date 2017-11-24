@@ -26,19 +26,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
-
     <link href="css/table-interactive.css"  rel="stylesheet">
-
-    <!-- script to use D3 -->
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.1"></script>
-    <!-- tooltip interactive with D3 -->
-    <style type="text/css">
-     div.tooltip {
-      position: absolute;
-      pointer-events: none;
-    }
-  
-    </style>
 
   </head>
 
@@ -167,7 +155,7 @@
             Il semble évident que la viande est ainsi l'aliment qui consomme le plus de ressources et s'en préoccuper permettrait d'utiliser celles-ci pour des aliments ayant des besoins moins élevés.
           </p>
           <p>
-            ICI VIENDRAIT LE TABLEAU INTERACTIF AVEC LES VIANDES / VEGETAUX
+            <canvas id="compare-table" class="grid"></canvas>
             <div id="tableInteractive">
               
             </div>
@@ -669,11 +657,13 @@
     <script src="js/leaflet.js"></script>
     <script src="js/world-map.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/custom.js"></script>
+    <!-- Script for D3 -->
+    <script src="js/d3.min.js"></script>
+    <script src="js/grid.js"></script>
 
-    <!-- Custom D3 scripts for this template -->
-    <script src="js/customD3.js"></script>
+    <!-- Custom scripts for this template -->
+    <!-- <script src="js/custom.js"></script> -->
+    <!-- <script src="js/customD3.js"></script> -->
 
   </body>
 

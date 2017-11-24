@@ -1,3 +1,8 @@
+div.tooltip {
+  position: absolute;
+  pointer-events: none;
+}
+
 .tableau {
   width:100%;
   table-layout: auto;
