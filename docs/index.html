@@ -8,7 +8,7 @@
     <meta name="description" content="A website about meat consumption problems and some solutions">
     <meta name="author" content="Ludovic et Magali Delafontaine &amp; Michela Zucça">
 
-    <title>Mean Meat - The revenge</title>
+    <title>La viande, plus si tendre</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,23 +27,17 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
 
+    <link href="css/table-interactive.css"  rel="stylesheet">
+
     <!-- script to use D3 -->
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.1"></script>
     <!-- tooltip interactive with D3 -->
     <style type="text/css">
      div.tooltip {
       position: absolute;
-      text-align: center;
-      width: 400px;
-      height: 400px;
-      padding: 8px;
-    /*  font: 10px sans-serif;*/
-      background: #ddd;
-      border: solid 1px #aaa;
-      border-radius: 8px;
       pointer-events: none;
-      opacity: 0.5
     }
+  
     </style>
 
   </head>
@@ -82,7 +76,7 @@
       <div class="container">
         <img class="img-fluid" src="img/title.png" alt="">
         <div class="intro-text">
-          <span class="name">Mean Meat - The revenge</span>
+          <span class="name">La viande, plus si tendre</span>
           <hr class="star-light">
           <span class="skills">Ludovic et Magali Delafontaine &amp; Michela Zucça</span>
         </div>
@@ -174,7 +168,9 @@
           </p>
           <p>
             ICI VIENDRAIT LE TABLEAU INTERACTIF AVEC LES VIANDES / VEGETAUX
-            <div id="tableInteractive"></div>
+            <div id="tableInteractive">
+              
+            </div>
 
             Ainsi pour
             produire 1kg de pommes de terre il ne faut que 500 litres d'eau et 2000 litres pour 1kg de soja ou de maïs.
@@ -452,7 +448,7 @@
           <p>
             De nombreuses vidéos circulent sur Internet montrant les conditions dans lesquelles les animaux sont élevés. Des réglementations tentent de
             limiter les souffrances animales et des progrès notables ont été réalisés grâce à certaines réglementations, notamment lors de la mise à mort
-            de l'animal qui doit être la moins violente possible.
+            de l'animal qui doit être la moins violente possible, mais les abus sont toujours présents.
           </p>
           <!-- Consumption -->
           <h3 class="text-left">Une consommation croissante</h3>
@@ -460,7 +456,7 @@
             Combien consommons-nous de viande ?
           </p>
           <p class="map-form">
-            1961 <input id="year-input" name="year-input" class="year-input" type="range" value="1961" max="2013" min="1961" step="1" onchange="updateMap()"> 2013
+            1961 <input id="year-input" name="year-input" class="year-input" type="range" value="1961" max="2013" min="1961" step="1" oninput="refreshMap()"> 2013
             <div id="map" class="map"></div>
           </p>
           <p>
@@ -614,11 +610,9 @@
             L'objectif de ce projet était de présenter une thématique d'une façon interactive et ludique. Toutes les sources de ce projet sont disponibles sur GitHub et ils ont utilisé les technologies suivantes:
             <ul>
               <li><a href="www.google.com">Données issues de l'ONU</a></li>
-              <li>MongoDB</li>
-              <li>Leafpad</li>
+              <li>Leaflet</li>
               <li>D3</li>
               <li>Node.js</li>
-              <li>Snap.svg</li>
             </ul>
           </p>
           <p>
