@@ -24,19 +24,23 @@ class WorldMap {
 
           const year = country.years[`_${yearInput}`];
 
-          const { kgPerPersonPerWeek, tonnes } = year;
+          if (year != null) {
+            const { kgPerPersonPerWeek, tonnes } = year;
 
-          content += '<b>Kg par personne par semaine</b><br>';
-          content += `Viande rouge: ${kgPerPersonPerWeek.redMeat.toFixed(2)} kg par personne par semaine<br>`;
-          content += `Viande blanche: ${kgPerPersonPerWeek.whiteMeat.toFixed(2)} kg par personne par semaine<br>`;
-          content += `Poisson: ${kgPerPersonPerWeek.waterMeat.toFixed(2)} kg par personne par semaine<br>`;
-          content += `Total: ${kgPerPersonPerWeek.total.toFixed(2)} kg par personne par semaine<br>`;
+            content += '<b>Kg par personne par semaine</b><br>';
+            content += `Viande rouge: ${kgPerPersonPerWeek.redMeat.toFixed(2)} kg par personne par semaine<br>`;
+            content += `Viande blanche: ${kgPerPersonPerWeek.whiteMeat.toFixed(2)} kg par personne par semaine<br>`;
+            content += `Poisson: ${kgPerPersonPerWeek.waterMeat.toFixed(2)} kg par personne par semaine<br>`;
+            content += `Total: ${kgPerPersonPerWeek.total.toFixed(2)} kg par personne par semaine<br>`;
 
-          content += '<b>Tonnes par année</b><br>';
-          content += `Viande rouge: ${tonnes.redMeat.toFixed(2)} tonnes<br>`;
-          content += `Viande blanche: ${tonnes.whiteMeat.toFixed(2)} tonnes<br>`;
-          content += `Poisson: ${tonnes.waterMeat.toFixed(2)} tonnes<br>`;
-          content += `Total: ${tonnes.total.toFixed(2)} tonnes`;
+            content += '<b>Tonnes par année</b><br>';
+            content += `Viande rouge: ${tonnes.redMeat.toFixed(2)} tonnes<br>`;
+            content += `Viande blanche: ${tonnes.whiteMeat.toFixed(2)} tonnes<br>`;
+            content += `Poisson: ${tonnes.waterMeat.toFixed(2)} tonnes<br>`;
+            content += `Total: ${tonnes.total.toFixed(2)} tonnes`;
+          } else {
+            content += 'Aucune donnée pour cette année n\'est disponible';
+          }
         } else {
           content += 'Aucune donnée pour ce pays n\'est disponible';
         }
@@ -51,8 +55,9 @@ class WorldMap {
 
     legend.onAdd = () => {
       const div = L.DomUtil.create('div', 'info legend');
-      const grades = [0, 34, 68, 102, 136, 170, 204, 238, 272];
-      const labels = ['<b>Tonnes consommées</b>'];
+
+      const grades = [0, 0.75, 1.5, 2.25, 3, 3.75, 4.5, 5.25, 6];
+      const labels = ['<b>kg/pers/sem consommés</b>'];
 
       let from;
       let to;
@@ -61,7 +66,7 @@ class WorldMap {
         from = grades[i];
         to = grades[i + 1];
 
-        labels.push(`<i style="background: ${this.getColor(from)}"></i> ${from} Mio${to ? ` - ${to} Mio` : '+'}`);
+        labels.push(`<i style="background: ${this.getColorKgPerPersonPerWeek(from)}"></i> ${from} ${to ? ` - ${to} kg/pers/sem` : 'kg/pers/sem+'}`);
       }
 
       div.innerHTML = labels.join('<br>');
@@ -101,27 +106,27 @@ class WorldMap {
     this.geoJson.addTo(this.container);
   }
 
-  getColor(consumption) {
+  getColorKgPerPersonPerWeek(consumption) {
     let color;
 
-    if (consumption < 34) {
-      color = '#fff7ec';
-    } else if (consumption < 68) {
-      color = '#fee8c8';
-    } else if (consumption < 102) {
-      color = '#fdd49e';
-    } else if (consumption < 136) {
-      color = '#fdbb84';
-    } else if (consumption < 170) {
-      color = '#fc8d59';
-    } else if (consumption < 204) {
-      color = '#ef6548';
-    } else if (consumption < 238) {
-      color = '#d7301f';
-    } else if (consumption < 272) {
-      color = '#b30000';
-    } else {
+    if (consumption > 6) {
       color = '#7f0000';
+    } else if (consumption > 5.25) {
+      color = '#b30000';
+    } else if (consumption > 4.5) {
+      color = '#d7301f';
+    } else if (consumption > 3.75) {
+      color = '#ef6548';
+    } else if (consumption > 3) {
+      color = '#fc8d59';
+    } else if (consumption > 2.25) {
+      color = '#fdbb84';
+    } else if (consumption > 1.5) {
+      color = '#fdd49e';
+    } else if (consumption > 0.75) {
+      color = '#fee8c8';
+    } else {
+      color = '#fff7ec';
     }
 
     return color;
@@ -130,12 +135,14 @@ class WorldMap {
   style(feature) {
     const yearInput = document.getElementById('year-input').value;
 
+    let kg = 0;
     let tonnes = 0;
 
     if (feature.properties.years != null) {
       const { years } = feature.properties;
 
       if (years[`_${yearInput}`] != null) {
+        kg = feature.properties.years[`_${yearInput}`].kgPerPersonPerWeek.total;
         tonnes = feature.properties.years[`_${yearInput}`].tonnes.total;
       }
     }
@@ -146,7 +153,7 @@ class WorldMap {
       color: 'white',
       dashArray: '3',
       fillOpacity: 0.7,
-      fillColor: this.getColor(tonnes / 100000),
+      fillColor: this.getColorKgPerPersonPerWeek(kg),
     };
   }
 
