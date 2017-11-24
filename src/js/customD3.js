@@ -2,7 +2,7 @@ class ImgInteractive {
   constructor(idElement) {
     this.idElement = idElement;
   }
-  addImage(imageSrc, id, tables) {
+  addImage(imageSrc) {
     this.div = d3.select('body').append('div')
       .attr('class', 'tooltip')
       .style('opacity', 0);
@@ -17,10 +17,21 @@ class ImgInteractive {
     this.svgImg.append('svg:image')
       .attr('width', 60)
       .attr('height', 60)
-      .attr('xlink:href', imageSrc)
+      .attr('xlink:href', imageSrc);
+  }
+
+  addDescription(idDescription, description, position) {
+    this.idDescription = idDescription;
+    this.description = description;
+    this.position = position;
+    // Ajouter description conso à la position X par rapport à l'image
+  }
+
+  enabledMouseEvent() {
+    this.svgImg
       .on('mouseover', this.mouseover.bind(this))
       .on('mousemove', () => {
-        this.mousemove(id, tables);
+        this.mousemove(this.idDescription, this.description);
       })
       .on('mouseout', this.mouseout.bind(this));
   }
@@ -28,7 +39,6 @@ class ImgInteractive {
   getSvg() {
     return this.svgImg;
   }
-
   mousemove(id, tables) {
     this.div
       .html(`<span id=${id}> ${tables}</span>`)
@@ -90,19 +100,22 @@ class Table {
   }
 
   getTable(index) {
+    if (index >= this.tables.length || index < 0) {
+      return null;
+    }
     return this.tables[index];
   }
 }
 
 
-const nutrimentsTitle = ['Ressource', 'Qte / Kg'];
+const nutrimentsTitle = ['Ressources', 'Qte / Kg'];
 const consoTitle = ['Nutriments', 'Qte / Kg'];
 
 const nutBeef = [['Protéines', '10g'], ['Fer', '24g'], ['Calcium', '0.2g'], ['Vitamine B12', '3g'], ['Glucides', '46g'], ['Lipides', '20g']];
 const consoBeef = [['Eau', '15000 litres'], ['Surface', '24 hectares'], ['Indice', '0.4']];
 const idBeef = 'idBeef';
-const tableBeef = new Table(idBeef, 'Que consomme en ressource naturelle 1kg de viande rouge? ', consoTitle, consoBeef);
-tableBeef.addTable('Quel apport en nutriment contient la viande rouge ?', nutrimentsTitle, nutBeef);
+const tableBeef = new Table(idBeef, 'Viande Rouge', consoTitle, consoBeef);
+tableBeef.addTable('Viande Rouge', nutrimentsTitle, nutBeef);
 
 const nutPig = [['Protéines', '0g'], ['Fer', '0g'], ['Calcium', '0g'], ['Vitamine B12', '0g'], ['Glucides', '0g'], ['Lipides', '0g']];
 const consoPig = [['Eau', '0 litres'], ['Surface', '0 hectares'], ['Indice', '0']];
@@ -134,11 +147,28 @@ const idCereals = 'idCereals';
 const tableCereals = new Table(idCereals, 'Que consomme en ressource naturelle 1kg de céréales? ', consoTitle, consoCereals);
 tableCereals.addTable('Quel apport en nutriment contient les céréales ?', nutrimentsTitle, nutCereals);
 
-
-const imgTable = new ImgInteractive('#tableInteractive');
-imgTable.addImage('svg/cow.svg', idBeef, tableBeef.getTables());
-imgTable.addImage('svg/pig.svg', idPig, tablePig.getTables());
-imgTable.addImage('svg/chicken.svg', idBeef, tableChicken.getTables());
-imgTable.addImage('svg/vegetables.svg', idBeef, tableBeef.getTables());
-imgTable.addImage('svg/beans.svg', idBeef, tableBeef.getTables());
-imgTable.addImage('svg/cereals.svg', idBeef, tableBeef.getTables());
+// Création des images
+const imgBeef = new ImgInteractive('#tableInteractive');
+imgBeef.addImage('svg/cow.svg');
+imgBeef.addDescription(idBeef, tableBeef.getTables());
+imgBeef.enabledMouseEvent();
+const imgPig = new ImgInteractive('#tableInteractive');
+imgPig.addImage('svg/pig.svg');
+imgPig.addDescription(idPig, tablePig.getTables());
+imgPig.enabledMouseEvent();
+const imgChicken = new ImgInteractive('#tableInteractive');
+imgChicken.addImage('svg/chicken.svg');
+imgChicken.addDescription(idChicken, tableChicken.getTables());
+imgChicken.enabledMouseEvent();
+const imgVegetables = new ImgInteractive('#tableInteractive');
+imgVegetables.addImage('svg/vegetables.svg');
+imgVegetables.addDescription(idVegetables, tableVegetables.getTables());
+imgVegetables.enabledMouseEvent();
+const imgBeans = new ImgInteractive('#tableInteractive');
+imgBeans.addImage('svg/beans.svg');
+imgBeans.addDescription(idBeans, tableBeans.getTables());
+imgBeans.enabledMouseEvent();
+const imgCereals = new ImgInteractive('#tableInteractive');
+imgCereals.addImage('svg/cereals.svg');
+imgCereals.addDescription(idCereals, tableCereals.getTables());
+imgCereals.enabledMouseEvent();
