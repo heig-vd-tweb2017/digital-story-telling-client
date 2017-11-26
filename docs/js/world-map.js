@@ -15,7 +15,7 @@ class WorldMap {
     this.info.update = (country) => {
       const yearInput = document.getElementById('year-input').value;
 
-      let content = `<h4>Consommation de nourriture - ${yearInput}</h4>`;
+      let content = `<h4>Consommation de viande - ${yearInput}</h4>`;
 
       if (country) {
         content += `<b>${country.name}</b><br>`;
