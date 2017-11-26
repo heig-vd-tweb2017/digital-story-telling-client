@@ -1,0 +1,21 @@
+{
+    "title": "1 kg de boeuf",
+    "score": 3,
+    "requirements": {
+        "water": 100,
+        "waterUnit": "L",
+        "surface": 1000,
+        "surfaceUnit": "m²"
+    },
+    "nutrients" : {
+        "iron": 24,
+        "calcium": 0.2,
+        "magnesium": 0,
+        "protein": 10,
+        "lipides": 55,
+        "glucides": 30,
+        "b12": 3,
+        "fiber": 0
+    },
+    "nutrientsUnit": "g"
+}

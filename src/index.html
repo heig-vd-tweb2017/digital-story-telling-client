@@ -154,14 +154,13 @@
           <p>
             Il semble évident que la viande est ainsi l'aliment qui consomme le plus de ressources et s'en préoccuper permettrait d'utiliser celles-ci pour des aliments ayant des besoins moins élevés.
           </p>
-          <p>
-            <canvas id="compare-table" class="grid"></canvas>
-            <div id="tableInteractive">
-              
-            </div>
-
-            Ainsi pour
-            produire 1kg de pommes de terre il ne faut que 500 litres d'eau et 2000 litres pour 1kg de soja ou de maïs.
+          <p class="svg-container">
+            <svg id="interactive-img-beef" class="interactive-img"></svg>
+            <svg id="interactive-img-vegetables" class="interactive-img"></svg><br>
+            <svg id="interactive-img-pig" class="interactive-img"></svg>
+            <svg id="interactive-img-cereals" class="interactive-img"></svg><br>
+            <svg id="interactive-img-chicken" class="interactive-img"></svg>
+            <svg id="interactive-img-beans" class="interactive-img"></svg>
           </p>
           <p>
             Note: L'indice tel et tel est basé sur un ratio BLABLABLA A REFAIRE 
@@ -659,11 +658,11 @@
 
     <!-- Script for D3 -->
     <script src="js/d3.min.js"></script>
-    <script src="js/grid.js"></script>
+    <script src="js/img-description.js"></script>
+    <script src="js/interactive-img.js"></script>
 
     <!-- Custom scripts for this template -->
-    <!-- <script src="js/custom.js"></script> -->
-    <!-- <script src="js/customD3.js"></script> -->
+    <script src="js/custom.js"></script>
 
   </body>
 

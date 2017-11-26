@@ -144,3 +144,21 @@ li {
   height: 500px;
   width: 100%;
 }
+
+.svg-container {
+  width: 100%;
+  text-align:center;
+  line-height: 1;
+  font-size: 5px;
+}
+
+.interactive-img {
+  height: 200px;
+  min-width: 200px;
+  max-width: 49%;
+}
+
+.svg-image {
+  height: 50px;
+  width: 100px;
+}
