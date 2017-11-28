@@ -22,7 +22,7 @@ For this project, we used several librairies and technologies.
 * [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) for the Bootstrap template.
 * [Leaflet](http://leafletjs.com/) to display the world map with meat's consumption.
 * [Mapbox](https://www.mapbox.com/), combined with Leaflet to display nice tiles on the map
-* [countries.geo.json](https://github.com/johan/world.geo.json/blob/master/countries.geo.json) to have the every countries as polygons in SVG
+* [Our own data merger](https://github.com/heig-vd-tweb2017/digital-story-telling-data-merger) to populate the map with our custom datas.
 * [Data-Driven Documents (D3)](https://d3js.org/) to create the interactive images with SVG elements
 * [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize our SVGs so they are normalized and way more smaller (+90% smaller !)
 * [ESLint](https://eslint.org/) for quality code control.
