@@ -1,10 +1,8 @@
 class ImgDescription {
   constructor(data) {
     this.title = data.title;
-    this.score = data.score;
-    this.requirements = data.requirements;
-    this.nutrients = data.nutrients;
-    this.nutrientsUnit = data.nutrientsUnit;
+    this.summary = data.summary;
+    this.details = data.details;
   }
 
   getFormatedTitle() {
@@ -19,48 +17,26 @@ class ImgDescription {
   }
 
   getFormatedSummary() {
-    const text = [];
-
-    const { requirements } = this;
-
-    text.push(['Eau', `${requirements.water} ${requirements.waterUnit}`]);
-    text.push(['Surface', `${requirements.surface} ${requirements.surfaceUnit}`]);
-    text.push(['Score', this.score]);
-
     return {
       x: '45%',
       dx: 90,
-      y: `${50 - ((text.length - 1) * 5)}%`,
+      y: `${50 - ((this.summary.length - 1) * 5)}%`,
       fontFamily: 'Montserrat',
       fontWeight: 'normal',
       fontSize: 12, // pts
-      text,
+      text: this.summary,
     };
   }
 
   getFormatedDetails() {
-    const text = [];
-
-    const { nutrients } = this;
-    const unit = this.nutrientsUnit;
-
-    text.push(['Fer', `${nutrients.iron}${unit}`]);
-    text.push(['Calcium', `${nutrients.calcium}${unit}`]);
-    text.push(['Magnésium', `${nutrients.magnesium}${unit}`]);
-    text.push(['Protéines', `${nutrients.protein}${unit}`]);
-    text.push(['Lipides', `${nutrients.lipides}${unit}`]);
-    text.push(['Glucides', `${nutrients.glucides}${unit}`]);
-    text.push(['Vitamine B12', `${nutrients.b12}${unit}`]);
-    text.push(['Fibres', `${nutrients.fiber}${unit}`]);
-
     return {
       x: '45%',
       dx: 90,
-      y: `${100 - (text.length * 9)}%`,
+      y: `${100 - (this.details.length * 9)}%`,
       fontFamily: 'Montserrat',
       fontWeight: 'normal',
       fontSize: 12, // pts
-      text,
+      text: this.details,
     };
   }
 }

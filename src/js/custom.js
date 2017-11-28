@@ -8,6 +8,11 @@ const vegetablesImage = new InteractiveImg('interactive-img-vegetables', 'svg/ve
 const cerealsImage = new InteractiveImg('interactive-img-cereals', 'svg/cereals.svg');
 const beansImage = new InteractiveImg('interactive-img-beans', 'svg/beans.svg');
 
+const oneHamburgerMeat = new InteractiveImg('interactive-img-one-hamburger-meat', 'svg/earth.svg');
+const oneHamburgerVegetarian = new InteractiveImg('interactive-img-one-hamburger-vegetarian', 'svg/earth.svg');
+const allHamburgersMeat = new InteractiveImg('interactive-img-all-hamburgers-meat', 'svg/earth.svg');
+const allHamburgersVegetarian = new InteractiveImg('interactive-img-all-hamburgers-vegetarian', 'svg/earth.svg');
+
 $(() => {
   $.getJSON('data/countries.geo.json')
     .done((data) => {
@@ -56,6 +61,34 @@ $(() => {
       const description = new ImgDescription(data);
       beansImage.addDescription(description);
       beansImage.enableInteraction();
+    });
+
+  $.getJSON('data/one-hamburger-meat.json')
+    .done((data) => {
+      const description = new ImgDescription(data);
+      oneHamburgerMeat.addDescription(description);
+      oneHamburgerMeat.enableInteraction();
+    });
+
+  $.getJSON('data/one-hamburger-vegetarian.json')
+    .done((data) => {
+      const description = new ImgDescription(data);
+      oneHamburgerVegetarian.addDescription(description);
+      oneHamburgerVegetarian.enableInteraction();
+    });
+
+  $.getJSON('data/all-hamburgers-meat.json')
+    .done((data) => {
+      const description = new ImgDescription(data);
+      allHamburgersMeat.addDescription(description);
+      allHamburgersMeat.enableInteraction();
+    });
+
+  $.getJSON('data/all-hamburgers-vegetarian.json')
+    .done((data) => {
+      const description = new ImgDescription(data);
+      allHamburgersVegetarian.addDescription(description);
+      allHamburgersVegetarian.enableInteraction();
     });
 });
 

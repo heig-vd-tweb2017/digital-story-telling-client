@@ -36,7 +36,7 @@ class InteractiveImg {
 
     let lineNumber = 0;
 
-    summary.text.forEach((line) => {
+    summary.text.forEach((item) => {
       this.summary.append('tspan')
         .attr('x', summary.x)
         .attr('y', summary.y)
@@ -45,7 +45,7 @@ class InteractiveImg {
         .attr('font-family', summary.fontFamily)
         .attr('font-weight', summary.fontWeight)
         .attr('font-size', summary.fontSize)
-        .text(line[0]);
+        .text(item.definition);
 
       this.summary.append('tspan')
         .attr('x', summary.x)
@@ -55,7 +55,7 @@ class InteractiveImg {
         .attr('font-family', summary.fontFamily)
         .attr('font-weight', summary.fontWeight)
         .attr('font-size', summary.fontSize)
-        .text(line[1]);
+        .text(item.value);
 
       lineNumber += 1;
     });
@@ -76,7 +76,7 @@ class InteractiveImg {
 
     let lineNumber = 0;
 
-    details.text.forEach((line) => {
+    details.text.forEach((item) => {
       this.details.append('tspan')
         .attr('x', details.x)
         .attr('y', details.y)
@@ -85,7 +85,7 @@ class InteractiveImg {
         .attr('font-family', details.fontFamily)
         .attr('font-weight', details.fontWeight)
         .attr('font-size', details.fontSize)
-        .text(line[0]);
+        .text(item.definition);
 
       this.details.append('tspan')
         .attr('x', details.x)
@@ -95,7 +95,7 @@ class InteractiveImg {
         .attr('font-family', details.fontFamily)
         .attr('font-weight', details.fontWeight)
         .attr('font-size', details.fontSize)
-        .text(line[1]);
+        .text(item.value);
 
       lineNumber += 1;
     });
