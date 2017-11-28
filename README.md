@@ -19,12 +19,20 @@ We wanted to redact this article to encourage people to think about their meat's
 ## How is this
 For this project, we used several librairies and technologies.
 
+### Client side
 * [Freelancer](http://startbootstrap.com/template-overviews/freelancer/) for the Bootstrap template.
 * [Leaflet](http://leafletjs.com/) to display the world map with meat's consumption.
 * [Mapbox](https://www.mapbox.com/), combined with Leaflet to display nice tiles on the map
 * [Our own data merger](https://github.com/heig-vd-tweb2017/digital-story-telling-data-merger) to populate the map with our custom datas.
 * [Data-Driven Documents (D3)](https://d3js.org/) to create the interactive images with SVG elements
 * [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize our SVGs so they are normalized and way more smaller (+90% smaller !)
+
+
+### Data merger side
+* [Node.js](https://nodejs.org/) for the execution engine.
+* [PapaParse](http://papaparse.com/) to parse the CSV datasets.
+
+### On both sides
 * [ESLint](https://eslint.org/) for quality code control.
 
 ## Live preview
