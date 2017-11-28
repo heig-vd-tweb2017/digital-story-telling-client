@@ -27,7 +27,6 @@ For this project, we used several librairies and technologies.
 * [Data-Driven Documents (D3)](https://d3js.org/) to create the interactive images with SVG elements
 * [SVGOMG](https://jakearchibald.github.io/svgomg/) to optimize our SVGs so they are normalized and way more smaller (+90% smaller !)
 
-
 ### Data merger side
 * [Node.js](https://nodejs.org/) for the execution engine.
 * [PapaParse](http://papaparse.com/) to parse the CSV datasets.
