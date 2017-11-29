@@ -1,51 +1,18 @@
 {
     "title": "1 kg de volaille",
     "summary": [
-        {
-            "definition" : "Eau",
-            "value": "100 L"
-        },
-        {
-            "definition" : "Surface",
-            "value": "1000 m²"
-        },
-        {
-            "definition" : "Score",
-            "value": "3"
-        }
+        {"definition" : "Eau", "value": "100 L"},
+        {"definition" : "Surface", "value": "1000 m²"},
+        {"definition" : "Score", "value": "3"}
     ],
     "details" : [
-        {
-            "definition" : "Fer",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Calcium",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Magnésium",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Protéines",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Lipides",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Glucides",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Vitamine B12",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Fibres",
-            "value": "23 g"
-        }
+        {"definition" : "Fer", "value": "23 g"},
+        {"definition" : "Calcium", "value": "23 g"},
+        {"definition" : "Magnésium", "value": "23 g"},
+        {"definition" : "Protéines", "value": "23 g"},
+        {"definition" : "Lipides", "value": "23 g"},
+        {"definition" : "Glucides", "value": "23 g"},
+        {"definition" : "Vitamine B12", "value": "23 g"},
+        {"definition" : "Fibres", "value": "23 g"}
     ]
 }
