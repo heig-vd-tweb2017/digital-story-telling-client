@@ -1,21 +1,20 @@
 {
-    "title": "1 kg de volaille",
-    "score": 3,
-    "requirements": {
-        "water": 100,
-        "waterUnit": "L",
-        "surface": 1000,
-        "surfaceUnit": "m²"
-    },
-    "nutrients" : {
-        "iron": 24,
-        "calcium": 0.2,
-        "magnesium": 0,
-        "protein": 10,
-        "lipides": 55,
-        "glucides": 30,
-        "b12": 3,
-        "fiber": 0
-    },
-    "nutrientsUnit": "g"
+    "title": "1 kg de poulet",
+    "image": "svg/chicken.svg",
+    "sound": "sound/chicken.ogg",
+    "summary": [
+        {"definition" : "Eau", "value": "4300 L"},
+        {"definition" : "Surface", "value": "53 m²"},
+        {"definition" : "Score", "value": "0.44 lm²"}
+    ],
+    "details" : [
+        {"definition" : "Fer", "value": "11 mg"},
+        {"definition" : "Calcium", "value": "150 mg"},
+        {"definition" : "Magnésium", "value": "250 mg"},
+        {"definition" : "Protéines", "value": "290 g"},
+        {"definition" : "Lipides", "value": "110 g"},
+        {"definition" : "Glucides", "value": "0 g"},
+        {"definition" : "Vitamine B12", "value": "3.2 µg"},
+        {"definition" : "Fibres", "value": "0 g"}
+    ]
 }

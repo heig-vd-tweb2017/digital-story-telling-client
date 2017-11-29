@@ -1,0 +1,15 @@
+{
+    "title": "7.5 millards de hamburgers végétarien",
+    "image": "svg/earth.svg",
+    "sound": "sound/earth-good.ogg",
+    "summary": [
+        {"definition" : "Type", "value": "Soja"},
+        {"definition" : "Poids", "value": "7.5 mrd x 180 g"},
+        {"definition" : "Eau", "value": "100 L"},
+        {"definition" : "Surface", "value": "1000 m²"}
+    ],
+    "details" : [
+        {"definition" : "Eau", "value": "0.0001 %"},
+        {"definition" : "Surface", "value": "0.1 %"}
+    ]
+}

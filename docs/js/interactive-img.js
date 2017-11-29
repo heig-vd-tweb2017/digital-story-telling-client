@@ -1,115 +1,103 @@
 class InteractiveImg {
-  constructor(svgContainerId, svgFile) {
+  constructor(svgContainerId, data, style) {
     this.svgContainer = d3.select(`#${svgContainerId}`);
 
-    this.svgImage = this.svgContainer.append('svg:image')
-      .attr('xling:href', svgFile)
-      .attr('x', '0px')
-      .attr('y', '25%')
-      .attr('width', '100%')
-      .attr('height', '100px');
+    this.data = data;
+    this.style = style;
   }
 
-  addDescription(description) {
-    this.description = description;
+  enableFullInteractivity() {
+    this.showImage();
+    this.showTitle();
+    this.showSummary();
+    this.showDetails();
+    this.enableSound();
+  }
 
-    const title = this.description.getFormatedTitle();
-    const summary = this.description.getFormatedSummary();
+  showImage() {
+    this.svgImage = this.svgContainer.append('svg:image')
+      .attr('xling:href', this.data.image)
+      .attr('x', this.style.image.x)
+      .attr('y', this.style.image.y)
+      .attr('width', this.style.image.width)
+      .attr('height', this.style.image.height);
+  }
 
+  showTitle() {
     this.title = this.svgContainer.append('text')
-      .attr('x', title.x)
-      .attr('y', title.y)
+      .attr('x', this.style.title.x)
+      .attr('y', this.style.title.y)
       .attr('text-anchor', 'middle')
-      .attr('font-family', title.fontFamily)
-      .attr('font-weight', title.fontWeight)
-      .attr('font-size', title.fontSize)
-      .text(title.text);
+      .attr('font-family', this.style.title.fontFamily)
+      .attr('font-weight', this.style.title.fontWeight)
+      .attr('font-size', this.style.title.fontSize)
+      .text(this.data.title);
+  }
 
+  showSummary() {
     this.summary = this.svgContainer.append('text')
-      .attr('x', summary.x)
-      .attr('y', summary.y)
+      .attr('x', this.style.content.x)
+      .attr('y', this.style.content.y)
       .attr('alignment-baseline', 'central')
-      .attr('font-family', summary.fontFamily)
-      .attr('font-weight', summary.fontWeight)
-      .attr('font-size', summary.fontSize)
+      .attr('font-family', this.style.content.fontFamily)
+      .attr('font-weight', this.style.content.fontWeight)
+      .attr('font-size', this.style.content.fontSize)
       .attr('style', 'opacity:1');
 
-    let lineNumber = 0;
-
-    summary.text.forEach((line) => {
-      this.summary.append('tspan')
-        .attr('x', summary.x)
-        .attr('y', summary.y)
-        .attr('dx', 0)
-        .attr('dy', `${(summary.fontSize * lineNumber)}`)
-        .attr('font-family', summary.fontFamily)
-        .attr('font-weight', summary.fontWeight)
-        .attr('font-size', summary.fontSize)
-        .text(line[0]);
-
-      this.summary.append('tspan')
-        .attr('x', summary.x)
-        .attr('y', summary.y)
-        .attr('dx', summary.dx)
-        .attr('dy', `${(summary.fontSize * lineNumber)}`)
-        .attr('font-family', summary.fontFamily)
-        .attr('font-weight', summary.fontWeight)
-        .attr('font-size', summary.fontSize)
-        .text(line[1]);
-
-      lineNumber += 1;
-    });
+    this.renderTable(this.summary, this.data.summary);
 
     this.svgImage.attr('width', '40%');
   }
 
-  enableInteraction() {
-    const details = this.description.getFormatedDetails();
-
+  showDetails() {
     this.details = this.svgContainer.append('text')
-      .attr('x', details.x)
-      .attr('y', details.y)
-      .attr('font-family', details.fontFamily)
-      .attr('font-weight', details.fontWeight)
-      .attr('font-size', details.fontSize)
+      .attr('x', this.style.content.x)
+      .attr('y', this.style.content.y)
+      .attr('font-family', this.style.content.fontFamily)
+      .attr('font-weight', this.style.content.fontWeight)
+      .attr('font-size', this.style.content.fontSize)
       .attr('style', 'opacity:0');
 
-    let lineNumber = 0;
-
-    details.text.forEach((line) => {
-      this.details.append('tspan')
-        .attr('x', details.x)
-        .attr('y', details.y)
-        .attr('dx', 0)
-        .attr('dy', `${(details.fontSize * lineNumber)}`)
-        .attr('font-family', details.fontFamily)
-        .attr('font-weight', details.fontWeight)
-        .attr('font-size', details.fontSize)
-        .text(line[0]);
-
-      this.details.append('tspan')
-        .attr('x', details.x)
-        .attr('y', details.y)
-        .attr('dx', details.dx)
-        .attr('dy', `${(details.fontSize * lineNumber)}`)
-        .attr('font-family', details.fontFamily)
-        .attr('font-weight', details.fontWeight)
-        .attr('font-size', details.fontSize)
-        .text(line[1]);
-
-      lineNumber += 1;
-    });
+    this.renderTable(this.details, this.data.details);
 
     this.svgImage
       .on('mouseover', this.mouseover.bind(this))
-      .on('mouseout', this.mouseout.bind(this))
+      .on('mouseout', this.mouseout.bind(this));
   }
 
-  enableSound(soundFile) {
+  enableSound() {
     this.svgImage
       .on('click', this.click.bind(this));
 
-    this.sound = new Audio(soundFile);
+    this.sound = new Audio(this.data.sound);
+  }
+
+  renderTable(container, rows) {
+    let lineNumber = 0;
+
+    rows.forEach((item) => {
+      container.append('tspan')
+        .attr('x', this.style.content.x)
+        .attr('y', this.style.content.y)
+        .attr('dx', 0)
+        .attr('dy', `${(this.style.content.fontSize * lineNumber)}`)
+        .attr('font-family', this.style.content.fontFamily)
+        .attr('font-weight', this.style.content.fontWeight)
+        .attr('font-size', this.style.content.fontSize)
+        .text(item.definition);
+
+      container.append('tspan')
+        .attr('x', this.style.content.x)
+        .attr('y', this.style.content.y)
+        .attr('dx', this.style.content.dx)
+        .attr('dy', `${(this.style.content.fontSize * lineNumber)}`)
+        .attr('font-family', this.style.content.fontFamily)
+        .attr('font-weight', this.style.content.fontWeight)
+        .attr('font-size', this.style.content.fontSize)
+        .text(item.value);
+
+      lineNumber += 1;
+    });
   }
 
   mouseover() {
