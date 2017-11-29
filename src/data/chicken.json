@@ -1,51 +1,20 @@
 {
-    "title": "1 kg de volaille",
+    "title": "1 kg de poulet",
+    "image": "svg/chicken.svg",
+    "sound": "sound/chicken.ogg",
     "summary": [
-        {
-            "definition" : "Eau",
-            "value": "100 L"
-        },
-        {
-            "definition" : "Surface",
-            "value": "1000 m²"
-        },
-        {
-            "definition" : "Score",
-            "value": "3"
-        }
+        {"definition" : "Eau", "value": "4300 L"},
+        {"definition" : "Surface", "value": "53 m²"},
+        {"definition" : "Score", "value": "0.44 lm²"}
     ],
     "details" : [
-        {
-            "definition" : "Fer",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Calcium",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Magnésium",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Protéines",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Lipides",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Glucides",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Vitamine B12",
-            "value": "23 g"
-        },
-        {
-            "definition" : "Fibres",
-            "value": "23 g"
-        }
+        {"definition" : "Fer", "value": "11 mg"},
+        {"definition" : "Calcium", "value": "150 mg"},
+        {"definition" : "Magnésium", "value": "250 mg"},
+        {"definition" : "Protéines", "value": "290 g"},
+        {"definition" : "Lipides", "value": "110 g"},
+        {"definition" : "Glucides", "value": "0 g"},
+        {"definition" : "Vitamine B12", "value": "3.2 µg"},
+        {"definition" : "Fibres", "value": "0 g"}
     ]
 }
