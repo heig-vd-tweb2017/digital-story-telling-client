@@ -10,6 +10,7 @@
     ],
     "details" : [
         {"definition" : "Eau", "value": "0.0001 %"},
-        {"definition" : "Surface", "value": "0.1 %"}
+        {"definition" : "Surface", "value": "0.1 %"},
+        {"definition" : "Etat", "value": "OK :-)"}
     ]
 }

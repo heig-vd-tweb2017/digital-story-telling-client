@@ -5,7 +5,7 @@
     "summary": [
         {"definition" : "Eau", "value": "400 L"},
         {"definition" : "Surface", "value": "6 m²"},
-        {"definition" : "Score", "value": "41.67 lm²"}
+        {"definition" : "Score", "value": "41.67"}
     ],
     "details" : [
         {"definition" : "Fer", "value": "8.1 mg"},
