@@ -1,18 +1,20 @@
 {
     "title": "1 kg de porc",
+    "image": "svg/pig.svg",
+    "sound": "sound/pig.ogg",
     "summary": [
-        {"definition" : "Eau", "value": "100 L"},
-        {"definition" : "Surface", "value": "1000 m²"},
-        {"definition" : "Score", "value": "3"}
+        {"definition" : "Eau", "value": "6000 L"},
+        {"definition" : "Surface", "value": "55 m²"},
+        {"definition" : "Score", "value": "0.30 lm²"}
     ],
     "details" : [
-        {"definition" : "Fer", "value": "23 g"},
-        {"definition" : "Calcium", "value": "23 g"},
-        {"definition" : "Magnésium", "value": "23 g"},
-        {"definition" : "Protéines", "value": "23 g"},
-        {"definition" : "Lipides", "value": "23 g"},
-        {"definition" : "Glucides", "value": "23 g"},
-        {"definition" : "Vitamine B12", "value": "23 g"},
-        {"definition" : "Fibres", "value": "23 g"}
+        {"definition" : "Fer", "value": "13 mg"},
+        {"definition" : "Calcium", "value": "190 mg"},
+        {"definition" : "Magnésium", "value": "230 mg"},
+        {"definition" : "Protéines", "value": "210 g"},
+        {"definition" : "Lipides", "value": "220 g"},
+        {"definition" : "Glucides", "value": "0 g"},
+        {"definition" : "Vitamine B12", "value": "0.93 µg"},
+        {"definition" : "Fibres", "value": "0 g"}
     ]
 }

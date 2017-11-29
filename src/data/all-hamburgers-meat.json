@@ -1,7 +1,7 @@
 {
     "title": "7.5 millards de hamburgers carnivore",
     "image": "svg/earth.svg",
-    "sound": "sound/earth.ogg",
+    "sound": "sound/earth-bad.ogg",
     "summary": [
         {"definition" : "Type", "value": "Boeuf"},
         {"definition" : "Poids", "value": "7.5 milliards x 180 g"},

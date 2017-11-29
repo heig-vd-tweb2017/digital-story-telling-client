@@ -3,18 +3,18 @@
     "image": "svg/beans.svg",
     "sound": "sound/beans.ogg",
     "summary": [
-        {"definition" : "Eau", "value": "100 L"},
-        {"definition" : "Surface", "value": "1000 m²"},
-        {"definition" : "Score", "value": "3"}
+        {"definition" : "Eau", "value": "80 L"},
+        {"definition" : "Surface", "value": "16 m²"},
+        {"definition" : "Score", "value": "78.13 lm²"}
     ],
     "details" : [
-        {"definition" : "Fer", "value": "23 g"},
-        {"definition" : "Calcium", "value": "23 g"},
-        {"definition" : "Magnésium", "value": "23 g"},
-        {"definition" : "Protéines", "value": "23 g"},
-        {"definition" : "Lipides", "value": "23 g"},
-        {"definition" : "Glucides", "value": "23 g"},
-        {"definition" : "Vitamine B12", "value": "23 g"},
-        {"definition" : "Fibres", "value": "23 g"}
+        {"definition" : "Fer", "value": "93 mg"},
+        {"definition" : "Calcium", "value": "1.85 g"},
+        {"definition" : "Magnésium", "value": "1.56 g"},
+        {"definition" : "Protéines", "value": "300 g"},
+        {"definition" : "Lipides", "value": "160 g"},
+        {"definition" : "Glucides", "value": "180 g"},
+        {"definition" : "Vitamine B12", "value": "0 µg"},
+        {"definition" : "Fibres", "value": "110 g"}
     ]
 }

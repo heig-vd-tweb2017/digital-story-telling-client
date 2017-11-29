@@ -1,7 +1,7 @@
 {
     "title": "Hamburger végétarien",
     "image": "svg/earth.svg",
-    "sound": "sound/earth.ogg",
+    "sound": "sound/earth-good.ogg",
     "summary": [
         {"definition" : "Type", "value": "Soja"},
         {"definition" : "Poids", "value": "180 g"},

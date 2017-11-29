@@ -1,7 +1,7 @@
 {
     "title": "7.5 millards de hamburgers végétarien",
     "image": "svg/earth.svg",
-    "sound": "sound/earth.ogg",
+    "sound": "sound/earth-good.ogg",
     "summary": [
         {"definition" : "Type", "value": "Soja"},
         {"definition" : "Poids", "value": "7.5 mrd x 180 g"},

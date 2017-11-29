@@ -1,18 +1,20 @@
 {
     "title": "1 kg de céréales",
+    "image": "svg/cereals.svg",
+    "sound": "sound/cereals.ogg",
     "summary": [
-        {"definition" : "Eau", "value": "100 L"},
-        {"definition" : "Surface", "value": "1000 m²"},
-        {"definition" : "Score", "value": "3"}
+        {"definition" : "Eau", "value": "1600 L"},
+        {"definition" : "Surface", "value": "16 m²"},
+        {"definition" : "Score", "value": "3.91 lm²"}
     ],
     "details" : [
-        {"definition" : "Fer", "value": "23 g"},
-        {"definition" : "Calcium", "value": "23 g"},
-        {"definition" : "Magnésium", "value": "23 g"},
-        {"definition" : "Protéines", "value": "23 g"},
-        {"definition" : "Lipides", "value": "23 g"},
-        {"definition" : "Glucides", "value": "23 g"},
-        {"definition" : "Vitamine B12", "value": "23 g"},
-        {"definition" : "Fibres", "value": "23 g"}
+        {"definition" : "Fer", "value": "15 mg"},
+        {"definition" : "Calcium", "value": "490 mg"},
+        {"definition" : "Magnésium", "value": "370 mg"},
+        {"definition" : "Protéines", "value": "55 g"},
+        {"definition" : "Lipides", "value": "17 g"},
+        {"definition" : "Glucides", "value": "230 g"},
+        {"definition" : "Vitamine B12", "value": "0.27 µg"},
+        {"definition" : "Fibres", "value": "37 g"}
     ]
 }

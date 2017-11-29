@@ -11,7 +11,7 @@ class InteractiveImg {
     this.showTitle();
     this.showSummary();
     this.showDetails();
-    //this.enableSound();
+    this.enableSound();
   }
 
   showImage() {
