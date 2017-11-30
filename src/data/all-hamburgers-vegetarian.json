@@ -4,13 +4,14 @@
     "sound": "sound/earth-good.ogg",
     "summary": [
         {"definition" : "Type", "value": "Soja"},
-        {"definition" : "Poids", "value": "7.5 millards x 180 g"},
-        {"definition" : "Eau", "value": "100 L"},
-        {"definition" : "Surface", "value": "1000 m²"}
+        {"definition" : "Poids", "value": "180 g"},
+        {"definition" : "Freq.", "value":"2 / semaine"},
+        {"definition" : "Eau", "value": "112 E11 L"},
+        {"definition" : "Surface", "value": "22 E11 m²"}
     ],
     "details" : [
-        {"definition" : "Eau", "value": "0.0001 %"},
-        {"definition" : "Surface", "value": "0.1 %"},
-        {"definition" : "Etat", "value": "OK :-)"}
+        {"definition" : "Eau", "value": "0.006 %"},
+        {"definition" : "Surface", "value": "4.6 %"},
+        {"definition" : "Etat", "value": "Acceptable"}
     ]
 }
