@@ -12,6 +12,6 @@
     "details" : [
         {"definition" : "Eau", "value": "1.28 %"},
         {"definition" : "Surface", "value": "96 %"},
-        {"definition" : "Constat", "value": "💀"}
+        {"definition" : "Constat", "value": "Pas OK 💔"}
     ]
 }
