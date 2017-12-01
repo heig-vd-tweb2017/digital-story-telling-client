@@ -127,7 +127,7 @@
               </li>
               <li>
                 Les besoins en eau<br>
-                Pour un kg de rôti de bœuf, il faut 100'000 litres d’eau. Pour produire un seul hamburger de 125g, presque 13'000 litres d’eau potable sont nécessaires. 15'400 litres sont nécessaire pour produire 1 kg de viande de bœuf, 6'000 litres pour 1kg de porc contre 1600 litres pour 1 kg de céréales.
+                Pour un kg de rôti de bœuf, il faut 100'000 litres d’eau. Pour produire un seul hamburger de 125g, presque 13'000 litres d’eau potable sont nécessaires. 15'400 litres sont nécessaire pour produire 1 kg de viande de bœuf, 6'000 litres pour 1 kg de porc contre 1600 litres pour 1 kg de céréales.
               </li>
             </ul>
           <p>
@@ -172,25 +172,70 @@
             <svg id="interactive-img-beans" class="interactive-img"></svg>
           </p>
           <p>
-            <b>Note</b>: le score de chaque aliment est basé sur les besoins en eau et en surface pour produire 1kg de l'aliment.
+            <b>Note</b>: le score de chaque aliment est basé sur les besoins en eau et en surface pour produire 1 kg de l'aliment.
             Les détails du calcul sont les suivants:
           </p>
           <p style="text-align:center">
               <math xmlns="http://www.w3.org/1998/Math/MathML">
                 <mrow>
-                  <mi>Score</mi>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>eau</mn>
+                      </mrow>
+                  </msub>
                   <mo>=</mo>
                   <mfrac>
                     <mn>1</mn>
                     <mn>Besoin en eau</mn>
                   </mfrac>
-                  <mo>*</mo>
+                </mrow>
+              </math>
+          </p>
+
+          <p style="text-align:center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>surface</mn>
+                      </mrow>
+                  </msub>
+                  <mo>=</mo>
                   <mfrac>
-                      <mn>1</mn>
-                      <mn>Besoin en surface</mn>
-                    </mfrac>
-                  <mo>*</mo>
-                  <mn>10⁴</mn>
+                    <mn>1</mn>
+                    <mn>Besoin en surface</mn>
+                  </mfrac>
+                </mrow>
+              </math>
+          </p>
+
+          <p style="text-align:center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>Score</mi>
+                  <mo>=</mo>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>surface</mn>
+                      </mrow>
+                  </msub>
+                  <mo>×</mo>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>eau</mn>
+                      </mrow>
+                  </msub>
+                  <mo>×</mo>
+                  <msup>
+                    <mn>10</mn>
+                      <mrow>
+                        <mn>4</mn>
+                      </mrow>
+                  </msup>
                 </mrow>
               </math>
           </p>
