@@ -10,8 +10,8 @@
         {"definition" : "Surface", "value": "300 m²"}
     ],
     "details" : [
-        {"definition" : "Eau", "value": "88 E-12 %"},
-        {"definition" : "Surface", "value": "6 E-10 %"},
-        {"definition" : "Etat", "value": "Acceptable"}
+        {"definition" : "Eau", "value": "88 × 10⁻¹⁰ %"},
+        {"definition" : "Surface", "value": "6 × 10⁻¹¹ %"},
+        {"definition" : "Constat", "value": "OK ❤️"}
     ]
 }

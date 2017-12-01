@@ -138,7 +138,7 @@
             <img class="img-inline-width" src="img/consumption.png" alt="">
           </p>
           <p>
-            La viande consomme énormément de ressources pour un retour faible. En effet, pour faire un kilo de viande de boeuf dans un 
+            La viande consomme énormément de ressources pour un retour faible. En effet, pour faire un kilo de viande de bœuf dans un 
             système d'élevage conventionnel, il est nécessaire d'utiliser:
             <ul>
               <li>Un espace de 323 m² afin qu'il puisse vivre</li>
@@ -172,25 +172,70 @@
             <svg id="interactive-img-beans" class="interactive-img"></svg>
           </p>
           <p>
-            <b>Note</b>: le score de chaque aliment est basé sur les besoins en eau et en surface pour produire 1kg de l'aliment.
+            <b>Note</b>: le score de chaque aliment est basé sur les besoins en eau et en surface pour produire 1 kg de l'aliment.
             Les détails du calcul sont les suivants:
           </p>
           <p style="text-align:center">
               <math xmlns="http://www.w3.org/1998/Math/MathML">
                 <mrow>
-                  <mi>Score</mi>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>eau</mn>
+                      </mrow>
+                  </msub>
                   <mo>=</mo>
                   <mfrac>
                     <mn>1</mn>
                     <mn>Besoin en eau</mn>
                   </mfrac>
-                  <mo>*</mo>
+                </mrow>
+              </math>
+          </p>
+
+          <p style="text-align:center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>surface</mn>
+                      </mrow>
+                  </msub>
+                  <mo>=</mo>
                   <mfrac>
-                      <mn>1</mn>
-                      <mn>Besoin en surface</mn>
-                    </mfrac>
-                  <mo>*</mo>
-                  <mn>10⁴</mn>
+                    <mn>1</mn>
+                    <mn>Besoin en surface</mn>
+                  </mfrac>
+                </mrow>
+              </math>
+          </p>
+
+          <p style="text-align:center">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <mrow>
+                  <mi>Score</mi>
+                  <mo>=</mo>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>surface</mn>
+                      </mrow>
+                  </msub>
+                  <mo>×</mo>
+                  <msub>
+                    <mi>I</mi>
+                      <mrow>
+                        <mn>eau</mn>
+                      </mrow>
+                  </msub>
+                  <mo>×</mo>
+                  <msup>
+                    <mn>10</mn>
+                      <mrow>
+                        <mn>4</mn>
+                      </mrow>
+                  </msup>
                 </mrow>
               </math>
           </p>
@@ -285,7 +330,7 @@
             <ul>
               <li>issues de la viande bovine, il faut 7 kg de protéines végétales, dont 1 kg comestibles par l'homme</li>
               <li>issues de la volaille, il faut 6 kg de protéines végétales, dont 5 kg comestibles par l'homme</li>
-              <li>issues des oeufs il faut 3 kg de protéines végétales, dont 2.8 kg comestibles par l'homme</li>
+              <li>issues des œufs il faut 3 kg de protéines végétales, dont 2.8 kg comestibles par l'homme</li>
               <li>issues de la viande de porc, il faut 6 kg de protéines végétales, dont 4.4 kg comestibles par l'homme</li>
             </ul>
           </p>
@@ -436,7 +481,7 @@
             </ul>
           </p>
           <p>
-            Les bovins sont moins touchés par ce phénomène, mais cela reste tout de même une réalité. Les oeufs de poules, de canards et de dindes
+            Les bovins sont moins touchés par ce phénomène, mais cela reste tout de même une réalité. Les œufs de poules, de canards et de dindes
             éclosent par milliers dans des armoires à incubation. Les animaux sont traités par lots et partagent tous les mêmes caractéristiques et façon de production: naissance, élevage et mort.
           </p>
           <p>
@@ -476,7 +521,7 @@
             car inadaptés par rapport aux critères de sélection.
           </p>
           <p>
-            Cette sélection, forcée, est extrême: les poules produisent de base environ quinze oeufs par année. Dans les fermes et leurs conditions actuelles,
+            Cette sélection, forcée, est extrême: les poules produisent de base environ quinze œufs par année. Dans les fermes et leurs conditions actuelles,
             elles en produisent jusqu'à 300 par année et s'en retrouvent rapidement épuisées. Leur courte vie est abrégée car elles ne sont plus productives.
             De plus, une vache doit avoir mis au monde un veau avant de commencer à produire du lait. C'est la raison pour laquelle on les insémine et, lorsque le veau arrive,
             il est rapidement séparé de la mère pour qu'elle puisse être remise au travail. Le veau n'aura quasi pas accès au lait de sa mère et c'est la raison
