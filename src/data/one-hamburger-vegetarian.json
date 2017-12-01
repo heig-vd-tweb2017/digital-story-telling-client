@@ -5,7 +5,7 @@
     "summary": [
         {"definition" : "Type", "value": "Soja"},
         {"definition" : "Poids", "value": "180 g"},
-        {"definition" : "Freq.", "value":"2 / semaine"},
+        {"definition" : "Freq.", "value":"deux / semaine"},
         {"definition" : "Eau", "value": "1498 L"},
         {"definition" : "Surface", "value": "300 m²"}
     ],
