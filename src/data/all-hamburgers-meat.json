@@ -4,10 +4,10 @@
     "sound": "sound/earth-bad.ogg",
     "summary": [
         {"definition" : "Type", "value": "Boeuf"},
-        {"definition" : "Poids", "value": "180 g"},
+        {"definition" : "Poids", "value": "7.5 milliards × 180 g"},
         {"definition" : "Freq.", "value":"2 / semaine"},
-        {"definition" : "Eau", "value": "216 × 1013 L"},
-        {"definition" : "Surface", "value": "46 × 10⁻¹² m²"}
+        {"definition" : "Eau", "value": "216 × 10¹³ L"},
+        {"definition" : "Surface", "value": "46 × 10¹² m²"}
     ],
     "details" : [
         {"definition" : "Eau", "value": "1.28 %"},
