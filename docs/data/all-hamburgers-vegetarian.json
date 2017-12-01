@@ -6,12 +6,12 @@
         {"definition" : "Type", "value": "Soja"},
         {"definition" : "Poids", "value": "180 g"},
         {"definition" : "Freq.", "value":"2 / semaine"},
-        {"definition" : "Eau", "value": "112 E11 L"},
-        {"definition" : "Surface", "value": "22 E11 m²"}
+        {"definition" : "Eau", "value": "112 × 10⁻¹¹ L"},
+        {"definition" : "Surface", "value": "22 × 10⁻¹¹ m²"}
     ],
     "details" : [
         {"definition" : "Eau", "value": "0.006 %"},
         {"definition" : "Surface", "value": "4.6 %"},
-        {"definition" : "Etat", "value": "Acceptable"}
+        {"definition" : "Constat", "value": "👍"}
     ]
 }
